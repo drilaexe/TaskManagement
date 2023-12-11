@@ -1,12 +1,13 @@
 <script setup>
-defineProps(["title", "description", "priority", "created_at"]);
+defineProps(["title", "description", "priority", "created_at", "id"]);
 import {
     PencilSquareIcon,
     ArrowsPointingOutIcon,
     XMarkIcon,
 } from "@heroicons/vue/24/solid";
-import { inject } from 'vue'
-const showmod = inject('showmodal')
+import { inject } from "vue";
+const showmod = inject("showmodal");
+const showmoddel = inject("showmodalDel");
 </script>
 
 <template>
@@ -33,10 +34,12 @@ const showmod = inject('showmodal')
         </div>
         <div class="col-span-1">
             <button>
-                <ArrowsPointingOutIcon class="h-6 w-6 text-dark-500 handle"  />
+                <ArrowsPointingOutIcon class="h-6 w-6 text-dark-500 handle" />
             </button>
-            <button @click="showmod()"><PencilSquareIcon class="h-6 w-6 text-blue-500"  /></button>
-            <button><XMarkIcon class="h-6 w-6 text-red-500" /></button>
+            <button @click="showmod(id)">
+                <PencilSquareIcon class="h-6 w-6 text-blue-500" />
+            </button>
+            <button @click="showmoddel(id)"><XMarkIcon class="h-6 w-6 text-red-500" /></button>
         </div>
     </div>
 </template>

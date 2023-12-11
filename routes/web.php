@@ -22,8 +22,12 @@ Route::get('/', [TaskController::class, 'startPage'])->name('start');
 Route::get('/newtask', function () {
     return Inertia::render('newtask');
 })->name('newtask');
-
 Route::post('/AddTasks',  [TaskController::class, 'AddTasks'])->name('AddTasks');
+Route::get('/taskId/{id}',  [TaskController::class, 'GetTask'])->name('GetTask');
+Route::delete('/DelTask',  [TaskController::class, 'DelTask'])->name('DelTask');
+Route::put('/EditTasks',  [TaskController::class, 'EditTasks'])->name('EditTasks');
+
+
 
 
 
