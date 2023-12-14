@@ -196,12 +196,12 @@ provide("showmodalDel", DelModalShow);
         </Modal>
         <Modal :show="DelModal" @close="closeModalDel">
             <div class="p-6">
-                    <h2 class="text-lg font-medium text-gray-900">Editing</h2>
+                    <h2 class="text-lg font-medium text-gray-900">Delete the task ?</h2>
 
                     <div
                         class="max-w-7xl mx-auto sm:px-6 lg:px-8 bg-white overflow-hidden shadow-sm sm:rounded-lg pt-4"
                     >
-                        <p>Are y</p>
+                        <p>Are you sure u want to delete the task ?</p>
                     </div>
 
                     <div class="mt-6 flex justify-between">
