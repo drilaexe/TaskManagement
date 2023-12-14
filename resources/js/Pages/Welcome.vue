@@ -185,7 +185,6 @@ provide("showmodalDel", DelModalShow);
                         </SecondaryButton>
                         <PrimaryButton
                             class="ms-4"
-                            type="button"
                             :class="{ 'opacity-25': updateform.processing }"
                             :disabled="updateform.processing"
                         >
